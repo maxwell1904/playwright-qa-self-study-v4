@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: ${LAB_DB_NAME:-laundry_lab}
+      POSTGRES_USER: ${LAB_DB_USER:-lab_user}
+      POSTGRES_PASSWORD: ${LAB_DB_PASSWORD:-lab_password}
+    ports:
+      - "${LAB_DB_PORT:-55432}:5432"
+    volumes:
+      - laundry_lab_pgdata:/var/lib/postgresql/data
+      - ../sql/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - ../sql/seed.sql:/docker-entrypoint-initdb.d/02_seed.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${LAB_DB_USER:-lab_user} -d ${LAB_DB_NAME:-laundry_lab}"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  laundry_lab_pgdata:

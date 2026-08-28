@@ -1,0 +1,13 @@
+.DS_Store
+**/.DS_Store
+
+/tmp/
+/lab-kit/node_modules/
+/lab-kit/playwright-report/
+/lab-kit/test-results/
+/lab-kit/.auth/
+
+.env
+.env.*
+!.env.example
+*.local

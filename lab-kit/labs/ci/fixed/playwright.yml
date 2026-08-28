@@ -1,0 +1,45 @@
+# Reference solution for P10. Keep it inert under labs/ci until the diagnosis timebox ends.
+name: fixed-playwright-example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Reproduce dependencies from lockfile
+        run: npm ci
+
+      - name: Install Chromium and OS dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Typecheck lab contracts
+        run: npm run typecheck
+
+      - name: Verify zero-foundation contracts
+        run: npm run foundation:worked && npm run foundation:test:reference
+
+      - name: Run trusted reference infrastructure checks
+        run: npm run check:kit
+
+      - name: Upload failure evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-reference-evidence
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7

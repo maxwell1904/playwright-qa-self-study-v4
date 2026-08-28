@@ -1,0 +1,13 @@
+{
+  "targetOrderCode": "LD-101",
+  "orders": [
+    {
+      "code": "LD-101",
+      "phone": "+84 912-345-678",
+      "transactions": [
+        { "type": "COLLECTION", "amount": 50000 },
+        { "type": "REFUND", "amount": 10000 }
+      ]
+    }
+  ]
+}

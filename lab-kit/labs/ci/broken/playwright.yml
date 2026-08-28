@@ -1,0 +1,29 @@
+# INTENTIONALLY BROKEN — inert P10 teaching example, not an active workflow.
+name: broken-playwright-example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # DEFECT 1: changes the dependency tree instead of reproducing package-lock.json.
+      - name: Install dependencies unreliably
+        run: npm install
+
+      # DEFECT 2: Chromium and its runner dependencies are never installed.
+      - name: Run reference checks too early
+        run: npm run check-kit
+
+      # DEFECT 3: success-only publication and a nonexistent path lose red-run evidence.
+      - name: Upload evidence only when green
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-report
+          path: reports/playwright

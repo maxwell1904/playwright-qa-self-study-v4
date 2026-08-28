@@ -1,0 +1,49 @@
+name: Playwright reference checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install pinned dependencies
+        run: npm ci
+
+      - name: Install Chromium and OS dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Show kit status
+        run: npm run status
+
+      - name: Typecheck contracts
+        run: npm run typecheck
+
+      - name: Verify foundation worked examples and reference contracts
+        run: npm run foundation:worked && npm run foundation:test:reference
+
+      - name: Run reference infrastructure suite
+        run: npm run check:kit
+
+      - name: Upload Playwright evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-reference-evidence
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 7

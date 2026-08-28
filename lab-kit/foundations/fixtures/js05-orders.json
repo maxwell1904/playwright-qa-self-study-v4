@@ -1,0 +1,12 @@
+[
+  {
+    "code": "LD-001",
+    "phone": "+84 912-345-678",
+    "status": "RECEIVED"
+  },
+  {
+    "code": "LD-002",
+    "phone": "0987.654.321",
+    "status": "PROCESSING"
+  }
+]

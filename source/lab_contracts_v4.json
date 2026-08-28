@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "description": "Executable teaching-to-lab contract. Paths are relative to pack root; mentions must occur in the declared teaching source.",
+  "modules": [
+    {
+      "id": "QA00",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/qa00.mjs", "npm run lab:qa00"],
+      "artifacts": ["lab-kit/foundations/work/qa00.mjs", "lab-kit/foundations/reference/qa00.mjs", "lab-kit/foundations/tests/qa00.test.mjs"],
+      "scripts": ["lab:qa00", "lab:qa00:reference"]
+    },
+    {
+      "id": "JS01",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js01.mjs", "foundations/work/js01_service_snapshot.mjs", "foundations/work/js01_failure_playground.mjs", "node foundations/work/js01_service_snapshot.mjs", "node foundations/work/js01_failure_playground.mjs", "npm run lab:js01"],
+      "artifacts": ["lab-kit/foundations/work/js01.mjs", "lab-kit/foundations/work/js01_service_snapshot.mjs", "lab-kit/foundations/work/js01_failure_playground.mjs", "lab-kit/foundations/reference/js01.mjs", "lab-kit/foundations/reference/js01_service_snapshot.mjs", "lab-kit/foundations/tests/js01.test.mjs"],
+      "scripts": ["lab:js01"]
+    },
+    {
+      "id": "JS02",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js02.mjs", "npm run lab:js02"],
+      "artifacts": ["lab-kit/foundations/work/js02.mjs", "lab-kit/foundations/reference/js02.mjs", "lab-kit/foundations/tests/js02.test.mjs"],
+      "scripts": ["lab:js02"]
+    },
+    {
+      "id": "JS03",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js03.mjs", "npm run lab:js03"],
+      "artifacts": ["lab-kit/foundations/work/js03.mjs", "lab-kit/foundations/reference/js03.mjs", "lab-kit/foundations/tests/js03.test.mjs"],
+      "scripts": ["lab:js03"]
+    },
+    {
+      "id": "JS04",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js04.mjs", "npm run lab:js04"],
+      "artifacts": ["lab-kit/foundations/work/js04.mjs", "lab-kit/foundations/reference/js04.mjs", "lab-kit/foundations/tests/js04.test.mjs"],
+      "scripts": ["lab:js04"]
+    },
+    {
+      "id": "JS05",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js05-monolith.mjs", "foundations/work/js05.mjs", "foundations/fixtures/js05-orders.json", "labs/js05/laundry-data-tools/starter/", "npm run lab:js05"],
+      "artifacts": ["lab-kit/foundations/work/js05-monolith.mjs", "lab-kit/foundations/work/js05.mjs", "lab-kit/foundations/work/js05-phone.mjs", "lab-kit/foundations/work/js05-status.mjs", "lab-kit/foundations/work/js05-orders.mjs", "lab-kit/foundations/fixtures/js05-orders.json", "lab-kit/foundations/reference/js05.mjs", "lab-kit/foundations/reference/js05-phone.mjs", "lab-kit/foundations/reference/js05-status.mjs", "lab-kit/foundations/reference/js05-orders.mjs", "lab-kit/foundations/tests/js05.test.mjs", "lab-kit/labs/js05/laundry-data-tools/starter/run.mjs", "lab-kit/labs/js05/laundry-data-tools/reference/run.mjs"],
+      "scripts": ["lab:js05", "lab:js05:monolith", "lab:js05:independent", "lab:js05:independent:reference"]
+    },
+    {
+      "id": "JS06",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js06.mjs", "labs/js06/predict.mjs", "npm run lab:js06", "npm run lab:js06:predict"],
+      "artifacts": ["lab-kit/foundations/work/js06.mjs", "lab-kit/foundations/reference/js06.mjs", "lab-kit/foundations/tests/js06.test.mjs", "lab-kit/labs/js06/predict.mjs"],
+      "scripts": ["lab:js06", "lab:js06:predict"]
+    },
+    {
+      "id": "JS07",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js07.mjs", "foundations/work/js07.learner.test.mjs", "npm run lab:js07"],
+      "artifacts": ["lab-kit/foundations/work/js07.mjs", "lab-kit/foundations/work/js07.learner.test.mjs", "lab-kit/foundations/reference/js07.mjs", "lab-kit/foundations/reference/js07.learner.test.mjs", "lab-kit/foundations/tests/js07.test.mjs"],
+      "scripts": ["lab:js07"]
+    },
+    {
+      "id": "JS08",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/js08.mjs", "tests/work/foundation/js08_bridge.spec.ts", "npm run lab:js08"],
+      "artifacts": ["lab-kit/foundations/work/js08.mjs", "lab-kit/foundations/reference/js08.mjs", "lab-kit/foundations/tests/js08.test.mjs", "lab-kit/tests/work/foundation/js08_bridge.spec.ts", "lab-kit/tests/reference/foundation/js08_bridge.spec.ts"],
+      "scripts": ["lab:js08"]
+    },
+    {
+      "id": "TS01",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/fixtures/ts01-starter.mjs", "foundations/work/ts01.ts", "foundations/type-tests/ts01.learner-errors.ts", "npm run lab:ts01"],
+      "artifacts": ["lab-kit/foundations/fixtures/ts01-starter.mjs", "lab-kit/foundations/work/ts01.ts", "lab-kit/foundations/reference/ts01.ts", "lab-kit/foundations/tests/ts01.test.ts", "lab-kit/foundations/type-tests/ts01.learner-errors.ts", "lab-kit/foundations/type-tests/ts01.reference-errors.ts"],
+      "scripts": ["lab:ts01", "lab:ts01:input"]
+    },
+    {
+      "id": "TS02",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/ts02.ts", "foundations/type-tests/ts02.learner-errors.ts", "npm run lab:ts02"],
+      "artifacts": ["lab-kit/foundations/work/ts02.ts", "lab-kit/foundations/reference/ts02.ts", "lab-kit/foundations/tests/ts02.test.ts", "lab-kit/foundations/type-tests/ts02.learner-errors.ts", "lab-kit/foundations/type-tests/ts02.reference-errors.ts"],
+      "scripts": ["lab:ts02"]
+    },
+    {
+      "id": "TS03",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/ts03.ts", "npm run lab:ts03"],
+      "artifacts": ["lab-kit/foundations/work/ts03.ts", "lab-kit/foundations/reference/ts03.ts", "lab-kit/foundations/tests/ts03.test.ts"],
+      "scripts": ["lab:ts03"]
+    },
+    {
+      "id": "TS04",
+      "teachingSource": "source/teaching/01_zero_foundation.md",
+      "mentions": ["foundations/work/ts04.ts", "foundations/type-tests/ts04.learner-errors.ts", "tests/work/foundation/ts04_bridge.spec.ts", "npm run lab:ts04"],
+      "artifacts": ["lab-kit/foundations/work/ts04.ts", "lab-kit/foundations/reference/ts04.ts", "lab-kit/foundations/tests/ts04.test.ts", "lab-kit/foundations/type-tests/ts04.learner-errors.ts", "lab-kit/foundations/type-tests/ts04.reference-errors.ts", "lab-kit/tests/work/foundation/ts04_bridge.spec.ts", "lab-kit/tests/reference/foundation/ts04_bridge.spec.ts"],
+      "scripts": ["lab:ts04"]
+    },
+    {
+      "id": "P01",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p01_anatomy.spec.ts", "npm run lab:p01"],
+      "artifacts": ["lab-kit/tests/work/p01_anatomy.spec.ts"],
+      "scripts": ["lab:p01"]
+    },
+    {
+      "id": "P02",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p02_locators.spec.ts", "npm run lab:p02"],
+      "artifacts": ["lab-kit/tests/work/p02_locators.spec.ts"],
+      "scripts": ["lab:p02"]
+    },
+    {
+      "id": "P03",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p03_sync.spec.ts", "npm run lab:p03"],
+      "artifacts": ["lab-kit/tests/work/p03_sync.spec.ts"],
+      "scripts": ["lab:p03"]
+    },
+    {
+      "id": "P04",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p04_controls.spec.ts", "npm run lab:p04"],
+      "artifacts": ["lab-kit/tests/work/p04_controls.spec.ts", "lab-kit/tests/fixtures/sample-note.txt"],
+      "scripts": ["lab:p04"]
+    },
+    {
+      "id": "P05",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p05_isolation.spec.ts", "tests/reference/foundation/p05_isolation.reference.spec.ts", "npm run lab:p05"],
+      "artifacts": ["lab-kit/tests/work/p05_isolation.spec.ts", "lab-kit/tests/reference/foundation/p05_isolation.reference.spec.ts"],
+      "scripts": ["lab:p05"]
+    },
+    {
+      "id": "P06",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p06_auth.spec.ts", "npm run lab:p06"],
+      "artifacts": ["lab-kit/tests/work/p06_auth.spec.ts"],
+      "scripts": ["lab:p06"]
+    },
+    {
+      "id": "P07",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p07_refactor/", "npm run lab:p07"],
+      "artifacts": ["lab-kit/tests/work/p07_refactor/README.md", "lab-kit/tests/work/p07_refactor/refactor.spec.ts"],
+      "scripts": ["lab:p07"]
+    },
+    {
+      "id": "P08",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p08_api.spec.ts", "npm run lab:p08"],
+      "artifacts": ["lab-kit/tests/work/p08_api.spec.ts"],
+      "scripts": ["lab:p08"]
+    },
+    {
+      "id": "P09",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p09_seeded_bugs/bug-notes/", "npm run lab:p09:missing-await", "npm run lab:p09"],
+      "artifacts": ["lab-kit/tests/work/p09_seeded_bugs/README.md", "lab-kit/tests/work/p09_seeded_bugs/missing-await.spec.ts", "lab-kit/tests/work/p09_seeded_bugs/duplicate-locator.spec.ts", "lab-kit/tests/work/p09_seeded_bugs/shared-owner.spec.ts", "lab-kit/tests/work/p09_seeded_bugs/wrong-environment.spec.ts", "lab-kit/tests/work/p09_seeded_bugs/bug-notes/missing-await.md", "lab-kit/tests/work/p09_seeded_bugs/bug-notes/duplicate-locator.md", "lab-kit/tests/work/p09_seeded_bugs/bug-notes/shared-owner.md", "lab-kit/tests/work/p09_seeded_bugs/bug-notes/wrong-environment.md"],
+      "scripts": ["lab:p09", "lab:p09:missing-await", "lab:p09:duplicate-locator", "lab:p09:shared-owner", "lab:p09:wrong-environment"]
+    },
+    {
+      "id": "P10",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["labs/ci/broken/playwright.yml", ".github/workflows/playwright.yml", "tests/work/p10_ci.spec.ts", "npm run lab:p10"],
+      "artifacts": ["lab-kit/labs/ci/broken/playwright.yml", "lab-kit/labs/ci/fixed/playwright.yml", "lab-kit/.github/workflows/playwright.yml", "lab-kit/tests/work/p10_ci.spec.ts"],
+      "scripts": ["lab:p10"]
+    },
+    {
+      "id": "P11",
+      "teachingSource": "source/teaching/03_playwright_core.md",
+      "mentions": ["tests/work/p11_capstone.spec.ts", "labs/p11/", "npm run lab:p11"],
+      "artifacts": ["lab-kit/tests/work/p11_capstone.spec.ts", "lab-kit/labs/p11/REQUIREMENT_PARAPHRASE.md", "lab-kit/labs/p11/RISK_AND_ORACLE.md", "lab-kit/labs/p11/DATA_OWNERSHIP.md", "lab-kit/labs/p11/BUG_JOURNAL.md"],
+      "scripts": ["lab:p11"]
+    },
+    {
+      "id": "J01",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/j01/UC20_TEST_DESIGN.md", "labs/j01/UC25_TRACKING_PACK.md", "npm run lab:j01"],
+      "artifacts": ["lab-kit/labs/j01/UC20_TEST_DESIGN.md", "lab-kit/labs/j01/UC25_TRACKING_PACK.md", "lab-kit/labs/j01/collection-guard.mjs", "lab-kit/labs/j01/collection-guard.test.mjs"],
+      "scripts": ["lab:j01"]
+    },
+    {
+      "id": "J02",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/j02/HTTP_TRACE_MATRIX.md", "tests/work/p08_api.spec.ts"],
+      "artifacts": ["lab-kit/labs/j02/HTTP_TRACE_MATRIX.md", "lab-kit/tests/work/p08_api.spec.ts"],
+      "scripts": ["lab:p08"]
+    },
+    {
+      "id": "J03",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/sql/work/queries.sql", "labs/sql/reference/queries.sql"],
+      "artifacts": ["lab-kit/labs/sql/README.md", "lab-kit/labs/sql/schema.sql", "lab-kit/labs/sql/seed.sql", "lab-kit/labs/sql/work/queries.sql", "lab-kit/labs/sql/reference/queries.sql"],
+      "scripts": []
+    },
+    {
+      "id": "J04",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/git-toy/", "npm run lab:j04"],
+      "artifacts": ["lab-kit/labs/git-toy/README.md", "lab-kit/labs/git-toy/create.mjs", "lab-kit/labs/git-toy/seed/REQUIREMENT.md", "lab-kit/labs/git-toy/seed/collection.mjs", "lab-kit/labs/git-toy/seed/collection.test.mjs"],
+      "scripts": ["lab:j04"]
+    },
+    {
+      "id": "J05",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/ci/broken/playwright.yml", "tests/work/p10_ci.spec.ts"],
+      "artifacts": ["lab-kit/labs/ci/README.md", "lab-kit/labs/ci/broken/playwright.yml", "lab-kit/labs/ci/fixed/playwright.yml", "lab-kit/tests/work/p10_ci.spec.ts"],
+      "scripts": ["lab:p10"]
+    },
+    {
+      "id": "J06",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/docker/compose.yaml", "npm run lab:j06:check"],
+      "artifacts": ["lab-kit/labs/docker/compose.yaml", "lab-kit/labs/docker/.env.example", "lab-kit/labs/docker/README.md", "lab-kit/labs/docker/check-compose.mjs"],
+      "scripts": ["lab:j06:check"]
+    },
+    {
+      "id": "J07",
+      "teachingSource": "source/teaching/02_qa_api_sql_ci.md",
+      "mentions": ["labs/j07/FAILURE_REPORT.md", "labs/j07/REQUIREMENT_QUESTION.md"],
+      "artifacts": ["lab-kit/labs/j07/FAILURE_REPORT.md", "lab-kit/labs/j07/REQUIREMENT_QUESTION.md", "lab-kit/labs/qa-templates/BUG_REPORT.md", "lab-kit/labs/qa-templates/EVIDENCE_LOG.md"],
+      "scripts": []
+    },
+    {
+      "id": "J00",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/J00_JAVA_READING.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/J00_JAVA_READING.md"],
+      "scripts": []
+    },
+    {
+      "id": "S01",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S01_HTTP_CONTAINER_TRACE.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S01_HTTP_CONTAINER_TRACE.md"],
+      "scripts": []
+    },
+    {
+      "id": "S02",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S02_MVC_PRG_TRACE.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S02_MVC_PRG_TRACE.md"],
+      "scripts": []
+    },
+    {
+      "id": "S03",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S03_TRANSACTION_TRACE.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S03_TRANSACTION_TRACE.md"],
+      "scripts": []
+    },
+    {
+      "id": "S04",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S04_PERSISTENCE_TRACE.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S04_PERSISTENCE_TRACE.md"],
+      "scripts": []
+    },
+    {
+      "id": "S05",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S05_SECURITY_TRACE.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S05_SECURITY_TRACE.md"],
+      "scripts": []
+    },
+    {
+      "id": "S06",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S06_TEST_LAYER_MATRIX.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S06_TEST_LAYER_MATRIX.md"],
+      "scripts": []
+    },
+    {
+      "id": "S07",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["lab-kit/labs/spring-reverse/S07_FULL_VERTICAL_TRACE.md", "UC09_DISTURBANCE_MATRIX.md"],
+      "artifacts": ["lab-kit/labs/spring-reverse/S07_FULL_VERTICAL_TRACE.md", "lab-kit/labs/spring-reverse/REVERSE_TRACE_CARD.md", "lab-kit/labs/spring-reverse/UC09_DISTURBANCE_MATRIX.md"],
+      "scripts": []
+    },
+    {
+      "id": "W1",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W1_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W1_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W2",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W2_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W2_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W3",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W3_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W3_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W4",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W4_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W4_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W5",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W5_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W5_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W6",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W6_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W6_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W7",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W7_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W7_EVIDENCE.md"],
+      "scripts": []
+    },
+    {
+      "id": "W8",
+      "teachingSource": "source/teaching/04_spring_swp_full.md",
+      "mentions": ["W8_EVIDENCE.md"],
+      "artifacts": ["lab-kit/labs/swp-waves/W8_EVIDENCE.md"],
+      "scripts": []
+    }
+  ]
+}

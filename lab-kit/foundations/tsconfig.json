@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": [
+    "worked/**/*.ts",
+    "work/**/*.ts",
+    "reference/**/*.ts",
+    "tests/**/*.ts",
+    "type-tests/**/*.ts"
+  ]
+}
