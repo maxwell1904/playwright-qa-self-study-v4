@@ -16,11 +16,11 @@
 
 ## Clone ở máy khác
 
-Repo mặc định private. Sau khi máy công ty đã đăng nhập GitHub account có quyền truy cập:
+Repo public nên có thể clone ở máy công ty mà không cần đăng nhập GitHub:
 
 ```bash
-git clone https://github.com/maxwell1904/playwright-qa-swp391-self-study-v4.git
-cd playwright-qa-swp391-self-study-v4/lab-kit
+git clone https://github.com/maxwell1904/playwright-qa-self-study-v4.git
+cd playwright-qa-self-study-v4/lab-kit
 npm ci
 npx playwright install chromium
 npm run status
