@@ -1,0 +1,45 @@
+name: Self-study pack checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: lab-kit
+
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: lab-kit/package-lock.json
+
+      - name: Install pinned dependencies
+        run: npm ci
+
+      - name: Install Chromium and OS dependencies
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify curriculum, contracts and reference suites
+        run: npm run check:all
+
+      - name: Upload Playwright evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-reference-evidence
+          path: |
+            lab-kit/playwright-report/
+            lab-kit/test-results/
+          if-no-files-found: ignore
+          retention-days: 7

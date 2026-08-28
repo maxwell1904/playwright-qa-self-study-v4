@@ -14,6 +14,21 @@
 | `source/lab_contracts_v4.json` | source → artifact → npm script executable contract |
 | `RELEASE_QA.md` | bằng chứng kiểm thử của bản phát hành |
 
+## Clone ở máy khác
+
+Repo mặc định private. Sau khi máy công ty đã đăng nhập GitHub account có quyền truy cập:
+
+```bash
+git clone https://github.com/maxwell1904/playwright-qa-swp391-self-study-v4.git
+cd playwright-qa-swp391-self-study-v4/lab-kit
+npm ci
+npx playwright install chromium
+npm run status
+```
+
+`source/progress/` đi cùng Git để đồng bộ tiến trình. Không commit `node_modules`, report,
+test-results, file `.env` hay dữ liệu/source nội bộ của công ty.
+
 ## Source volume order
 
 Teaching PDF được ghép theo thứ tự:
